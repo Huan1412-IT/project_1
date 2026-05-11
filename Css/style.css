@@ -1,0 +1,111 @@
+/* Giao diện tổng thể */
+body {
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Thanh điều hướng (Navbar) */
+.navbar {
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Định dạng các ô vuông sản phẩm (Product Card) */
+.product-card {
+    border: none;
+    border-radius: 15px;
+    background: #fff;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important;
+}
+
+/* Khung ảnh/Icon giả lập */
+.card-img-top {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    color: white;
+    font-size: 4rem;
+    border-radius: 15px 15px 0 0;
+}
+
+/* Nội dung trong Card */
+.card-body {
+    padding: 1.5rem;
+}
+
+.category-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #28a745;
+    background: #e8f5e9;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 1.15rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    height: 2.8rem; /* Giữ tiêu đề 2 dòng để các ô đều nhau */
+    overflow: hidden;
+}
+
+.price-text {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #e74c3c;
+}
+
+/* Form đăng nhập và Thêm/Sửa */
+.auth-card, .form-card {
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    background: rgb(88, 248, 176);
+}
+
+.form-control {
+    border-radius: 10px;
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+}
+
+/* Nút bấm */
+.btn {
+    border-radius: 10px;
+    font-weight: 600;
+    padding: 8px 20px;
+}
+
+.btn-primary { background-color: #007bff; border: none; }
+.btn-success { background-color: #28a745; border: none; }
+
+/* Trạng thái tồn kho */
+.stock-low {
+    color: #dc3545;
+    font-weight: bold;
+}
+
+.stock-ok {
+    color: #28a745;
+}

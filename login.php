@@ -3,7 +3,7 @@
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
-// 2. Include db.php
+ 
 include 'db.php'; 
 
 // 3. Kiểm tra chuyển hướng an toàn

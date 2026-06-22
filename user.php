@@ -1,6 +1,6 @@
 <?php 
 // 1. Kết nối DB và Session
-include 'db.php'; 
+include './Database/db.php'; 
 
 // 2. Kiểm tra đăng nhập
 if (!isset($_SESSION['user'])) {

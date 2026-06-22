@@ -1,6 +1,6 @@
 <?php 
 // 1. Kết nối Database và khởi tạo Session (db.php đã xử lý session_start)
-include 'db.php'; 
+include './Database/db.php'; 
 
 // 2. Kiểm tra đăng nhập
 if (!isset($_SESSION['user'])) {
@@ -165,7 +165,7 @@ $current_page = basename($_SERVER['PHP_SELF']);
                                 <i class="fas fa-trash"></i> Xóa
                             </a>
                         <?php else: ?>
-                            <a href="ban-hang.php?id=<?= $row['MaSP'] ?>" class="btn btn-success btn-sm w-100 fw-bold">
+                            <a href="Models/staff.php" class="btn btn-success btn-sm w-100 fw-bold">
                                 <i class="fas fa-cart-plus me-1"></i> Mua Hàng
                             </a>
                         <?php endif; ?>

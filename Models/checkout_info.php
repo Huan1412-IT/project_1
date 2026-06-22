@@ -5,7 +5,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // 2. Kiểm tra đường dẫn db.php (Dùng __DIR__ để chính xác tuyệt đối)
-require_once __DIR__ . '/../db.php'; 
+require_once __DIR__ . '/../Database/db.php'; 
 
 // 3. Kiểm tra đăng nhập và giỏ hàng
 if (!isset($_SESSION['user_id'])) {

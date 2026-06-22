@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 // 2. Include db.php
-include 'db.php'; 
+include './Database/db.php'; 
 
 // 3. Kiểm tra chuyển hướng an toàn
 if (isset($_SESSION['user']) && isset($_SESSION['quyen'])) {
@@ -38,8 +38,10 @@ if (isset($_POST['login'])) {
             $_SESSION['quyen']  = $row['QuyenHan']; 
             $_SESSION['hoten']  = $row['HoTen'];
 
-            if ($_SESSION['quyen'] == 'admin' || $_SESSION['quyen'] == 'staff' ) {
+            if ($_SESSION['quyen'] == 'admin') {
                 header("Location: index.php");
+            } elseif ($_SESSION['quyen'] == 'staff') {
+                header("Location: ./Models/staff.php");
             } else {
                 header("Location: user.php"); 
             }

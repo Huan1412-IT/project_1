@@ -1,6 +1,7 @@
 <?php
-include '../db.php';
-
+session_start();
+// Include DB using absolute path relative to this file
+require_once __DIR__ . '/../Database/db.php';
 $id = $_GET['id'];
 $data = mysqli_fetch_assoc(mysqli_query($conn, "SELECT * FROM NhaCungCap WHERE MaNCC=$id"));
 

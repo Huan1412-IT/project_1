@@ -1,7 +1,7 @@
 <?php 
-include '../db.php'; 
-// if (!isset($_SESSION['user'])) header("Location: login.php");
-
+session_start();
+// Include DB using absolute path relative to this file
+require_once __DIR__ . '/../Database/db.php';
 // Kiểm tra xem có ID được gửi đến không
 if (isset($_GET['id'])) {
     $id = $_GET['id'];

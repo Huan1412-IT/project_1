@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'db.php'; 
+include './Database/db.php'; 
 
 if (isset($_GET['id'])) {
     $id = mysqli_real_escape_string($conn, $_GET['id']);
@@ -82,7 +82,7 @@ if (isset($_GET['id'])) {
             </div>
 
             <div class="mt-5">
-                <form action="User/add_to_cart_fast.php" method="POST">
+                <form action="./Models/add_to_cart_fast.php" method="POST">
                     <input type="hidden" name="id_sp" value="<?= $sp['MaSP'] ?>">
                     
                     <div class="d-flex align-items-center mb-4">

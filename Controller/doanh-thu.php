@@ -1,5 +1,7 @@
 <?php
-include '../db.php';
+session_start();
+// Include DB using absolute path relative to this file
+require_once __DIR__ . '/../Database/db.php';
 
 if (!isset($_SESSION['user'])) {
     echo "<script>alert('Vui lòng đăng nhập'); window.location.href='../login.php';</script>";

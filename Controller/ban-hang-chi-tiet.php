@@ -1,6 +1,7 @@
 <?php
 session_start();
-include '../db.php';
+// Include DB using absolute path relative to this file
+require_once __DIR__ . '/../Database/db.php';
 
 // 1. Lấy ID từ URL an toàn
 $id = isset($_GET['id']) ? intval($_GET['id']) : 0;

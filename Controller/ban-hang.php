@@ -1,6 +1,7 @@
 <?php
 session_start();
-include '../db.php';
+// Include DB using absolute path relative to this file
+require_once __DIR__ . '/../Database/db.php';
 
 $sql = "
 SELECT 

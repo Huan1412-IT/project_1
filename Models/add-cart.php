@@ -1,6 +1,13 @@
 <?php
 session_start();
-include '../db.php'; // Đường dẫn ngược ra 1 cấp để vào file db.php
+// Include DB using absolute path relative to this file
+require_once __DIR__ . '/../Database/db.php';
+
+// Verify database connection exists
+if (!isset($conn) || !($conn instanceof mysqli)) {
+    error_log('Database connection not found in ' . __FILE__);
+    die('Lỗi: Không thể kết nối tới Cơ sở dữ liệu. Vui lòng thử lại sau.');
+}
 
 // 1. Kiểm tra nếu không có ID sản phẩm thì quay về trang chủ
 if (!isset($_GET['id']) || empty($_GET['id'])) {

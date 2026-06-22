@@ -1,0 +1,32 @@
+[2026-06-22 07:04:19] BEGIN process_order - cart: {"5":"1"}
+[2026-06-22 07:04:19] Prices: {"5":"80000.00"} Total: 80000
+[2026-06-22 07:04:19] Processing product 5 quantity 1
+[2026-06-22 07:04:19] Found lots for 5: [{"MaLo":"8","SoLuongTon":"19"}]
+[2026-06-22 07:04:19] Allocated 1 from lot 8 to product 5, remaining=0
+[2026-06-22 07:04:36] BEGIN process_order - cart: {"7":"1"}
+[2026-06-22 07:04:36] Prices: {"7":"50000.00"} Total: 50000
+[2026-06-22 07:04:36] Processing product 7 quantity 1
+[2026-06-22 07:04:36] Found lots for 7: []
+[2026-06-22 07:04:36] INSUFFICIENT stock for 7: available=0 needed=1
+[2026-06-22 07:04:36] EXCEPTION: Sản phẩm ID 7 đã hết hàng hoặc hết hạn sử dụng! CART={"7":"1"}
+[2026-06-22 07:06:23] BEGIN process_order - cart: {"7":"1"}
+[2026-06-22 07:06:23] Prices: {"7":"50000.00"} Total: 50000
+[2026-06-22 07:06:23] Processing product 7 quantity 1
+[2026-06-22 07:06:23] Found lots for 7: []
+[2026-06-22 07:06:23] Total stock for 7 from SanPham: 60
+[2026-06-22 07:06:23] Inserted synthetic lot for 7 with qty 60 exp 2036-06-22
+[2026-06-22 07:06:23] After insert, lots for 7: [{"MaLo":"10","SoLuongTon":"60"}]
+[2026-06-22 07:06:23] Allocated 1 from lot 10 to product 7, remaining=0
+[2026-06-22 07:06:33] BEGIN process_order - cart: {"7":"1"}
+[2026-06-22 07:06:33] Prices: {"7":"50000.00"} Total: 50000
+[2026-06-22 07:06:33] Processing product 7 quantity 1
+[2026-06-22 07:06:33] Found lots for 7: [{"MaLo":"10","SoLuongTon":"59"}]
+[2026-06-22 07:06:33] Allocated 1 from lot 10 to product 7, remaining=0
+[2026-06-22 07:07:06] BEGIN process_order - cart: {"3":"1"}
+[2026-06-22 07:07:06] Prices: {"3":"200000.00"} Total: 200000
+[2026-06-22 07:07:06] Processing product 3 quantity 1
+[2026-06-22 07:07:06] Found lots for 3: []
+[2026-06-22 07:07:06] Total stock for 3 from SanPham: 19
+[2026-06-22 07:07:06] Inserted synthetic lot for 3 with qty 19 exp 2036-06-22
+[2026-06-22 07:07:06] After insert, lots for 3: [{"MaLo":"11","SoLuongTon":"19"}]
+[2026-06-22 07:07:06] Allocated 1 from lot 11 to product 3, remaining=0

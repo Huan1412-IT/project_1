@@ -1,8 +1,9 @@
 <?php 
 // =====================
 // 1. INCLUDE DB + SESSION
-// =====================
-include '../db.php'; 
+// =====================session_start();
+// Include DB using absolute path relative to this file
+require_once __DIR__ . '/../Database/db.php';
 
 // Kiểm tra đăng nhập
 if (!isset($_SESSION['user'])) {

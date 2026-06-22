@@ -1,6 +1,7 @@
 <?php
-include '../db.php';
-
+session_start();
+// Include DB using absolute path relative to this file
+require_once __DIR__ . '/../Database/db.php';
 // ❌ Không gọi session_start() nếu db.php đã gọi rồi
 if (session_status() === PHP_SESSION_NONE) {
     session_start();

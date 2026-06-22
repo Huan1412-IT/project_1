@@ -1,5 +1,7 @@
 <?php
-include '../db.php';
+session_start();
+// Include DB using absolute path relative to this file
+require_once __DIR__ . '/../Database/db.php';
 
 // 1. KHỞI ĐỘNG SESSION (CHỐNG LỖI LẶP)
 if (session_status() === PHP_SESSION_NONE) {

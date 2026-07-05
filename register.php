@@ -2,7 +2,7 @@
 // 1. Include db.php để lấy kết nối $conn và session
 include './Database/db.php'; 
 
-// Nếu đã đăng nhập thì không cần đăng ký, đẩy về trang chủ
+ 
 if (isset($_SESSION['user'])) {
     header("Location: index.php");
     exit();

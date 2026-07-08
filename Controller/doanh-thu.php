@@ -100,6 +100,22 @@ while ($row = mysqli_fetch_assoc($chart)) {
     </div>
 </div>
 
+<style>
+
+table tbody tr{
+
+transition:0.2s;
+
+}
+
+table tbody tr:hover{
+
+background:#eef8ff;
+
+}
+
+</style>
+
 <!-- BẢNG HÓA ĐƠN -->
 <div class="card shadow-sm mt-4">
     <div class="card-body">

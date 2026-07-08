@@ -35,6 +35,96 @@ $result = mysqli_query($conn, "SELECT * FROM NhaCungCap ORDER BY MaNCC DESC");
                 <th width="160">Thao tác</th>
             </tr>
         </thead>
+        <style>
+
+body{
+    background:#eef3f8;
+    font-family:'Segoe UI',sans-serif;
+}
+
+.main-card{
+    border:none;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    overflow:hidden;
+}
+
+.card-header-custom{
+
+    background:linear-gradient(135deg,#00b894,#2ecc71);
+
+    color:white;
+
+    padding:22px;
+}
+
+.table{
+
+    border-collapse:separate;
+
+    border-spacing:0 10px;
+
+}
+
+.table thead{
+
+    background:#28a745;
+
+    color:white;
+
+}
+
+.table thead th{
+
+    border:none;
+
+}
+
+.table tbody tr{
+
+    background:white;
+
+    transition:.3s;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.05);
+
+}
+
+.table tbody tr:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+}
+
+.btn{
+
+    border-radius:30px;
+
+}
+
+.form-control{
+
+    border-radius:30px;
+
+}
+
+.stat-box{
+
+    background:white;
+
+    border-left:5px solid #28a745;
+
+    border-radius:15px;
+
+    padding:18px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.06);
+
+}
+
+</style>
         <tbody>
         <?php if (mysqli_num_rows($result) > 0): ?>
             <?php while ($row = mysqli_fetch_assoc($result)): ?>

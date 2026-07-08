@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 SET SoLuongTong = SoLuongTong + $SoLuongNhap
                 WHERE MaSP = $MaSP");
 
-            header("Location: lo-hang.php");
+            header("Location: LoHang.php");
             exit();
         } else {
             echo "Lỗi SQL: " . mysqli_error($conn);

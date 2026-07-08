@@ -32,7 +32,7 @@ $result = mysqli_query($conn,"
 <th></th>
 </tr>
 </thead>
-
+//ghi chu sql sua lan 1
 <tbody>
 <?php while ($row = mysqli_fetch_assoc($result)): ?>
 <tr>

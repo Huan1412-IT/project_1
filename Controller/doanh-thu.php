@@ -30,7 +30,7 @@ $dt_tong = mysqli_fetch_assoc(mysqli_query($conn, "
     FROM HoaDon
 "))['Tong'];
 
-// Doanh thu 7 ngày gần nhất
+
 $chart = mysqli_query($conn, "
     SELECT DATE(NgayTao) AS Ngay, SUM(TongTien) AS Tong
     FROM HoaDon

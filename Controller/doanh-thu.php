@@ -115,12 +115,18 @@ while ($row = mysqli_fetch_assoc($chart)) {
             </thead>
             <tbody>
             <?php
-            $hd = mysqli_query($conn, "
-                SELECT h.MaHD, h.NgayTao, h.TongTien, n.HoTen
-                FROM HoaDon h
-                JOIN NguoiDung n ON h.MaND = n.MaND
-                ORDER BY h.NgayTao DESC
-            ");
+            $sql = "
+            SELECT h.MaHD, h.NgayTao, h.TongTien, n.HoTen
+            FROM HoaDon h
+            JOIN NguoiDung n ON h.MaND = n.MaND
+            ORDER BY h.NgayTao DESC
+        ";
+
+         $hd = mysqli_query($conn, $sql);
+
+if (!$hd) {
+    die(mysqli_error($conn));
+}
             while ($row = mysqli_fetch_assoc($hd)):
             ?>
                 <tr>

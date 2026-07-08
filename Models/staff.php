@@ -2,6 +2,7 @@
 // 1. Kết nối DB và khởi tạo Session
 session_start();
 // Include DB using absolute path relative to this file
+ob_start();
 require_once __DIR__ . '/../Database/db.php';
 
 // Kiểm tra quyền truy cập (Chỉ Admin hoặc Nhân viên mới được vào)
@@ -378,7 +379,7 @@ function submitPOSOrder() {
     formData.append('customer_phone', customerPhone);
     formData.append('cart_data', JSON.stringify(cartData));
 
-    fetch('/Models/staff.php', {
+    fetch('staff.php', {
         method: 'POST',
         body: formData
     })
